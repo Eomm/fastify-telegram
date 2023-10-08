@@ -1,0 +1,38 @@
+{
+  "name": "@eomm/fastify-telegram",
+  "access": "public",
+  "version": "0.0.0",
+  "description": "Create and manage a Telegram bot, easily",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "tap test/**/*.test.js"
+  },
+  "keywords": [
+    "fastify",
+    "telegram",
+    "bot",
+    "fastify-plugin",
+    "telegraf"
+  ],
+  "author": "Manuel Spigolon <behemoth89@gmail.com> (https://github.com/Eomm)",
+  "license": "MIT",
+  "homepage": "https://github.com/Eomm/fastify-telegram#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eomm/fastify-telegram.git"
+  },
+  "funding": "https://github.com/Eomm/fastify-telegram?sponsor=1",
+  "bugs": {
+    "url": "https://github.com/Eomm/fastify-telegram/issues"
+  },
+  "dependencies": {
+    "fastify-plugin": "^4.5.1"
+  },
+  "devDependencies": {
+    "fastify": "^4.23.2",
+    "standard": "^17.1.0",
+    "tap": "^16.3.9"
+  }
+}
