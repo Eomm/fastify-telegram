@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "test": "tap test/**/*.test.js"
+    "test": "tap --no-cov test/**/*.test.js"
   },
   "keywords": [
     "fastify",
@@ -28,7 +28,9 @@
     "url": "https://github.com/Eomm/fastify-telegram/issues"
   },
   "dependencies": {
-    "fastify-plugin": "^4.5.1"
+    "fastify-plugin": "^4.5.1",
+    "telegraf": "^4.14.0",
+    "undici": "^5.25.4"
   },
   "devDependencies": {
     "fastify": "^4.23.2",
