@@ -8,6 +8,7 @@ const { Telegraf } = require('telegraf')
 async function fastifyTelegram (app, options) {
   const {
     decoratorBotName = 'telegramBot',
+    waitForHealthPolling = app.initialConfig.pluginTimeout / 6,
     baseUrl,
     webhookSecret,
     botToken,
@@ -63,7 +64,7 @@ async function fastifyTelegram (app, options) {
       // it triggers an error during startup if the config is invalid
       await Promise.race([
         bot.launch({ webhook: undefined }).catch(handleFatalError),
-        timeout(app.initialConfig.pluginTimeout / 2)
+        timeout(waitForHealthPolling)
       ])
 
       if (startError) {

@@ -60,6 +60,10 @@ async function run () {
     // Ref: https://core.telegram.org/bots/api#setwebhook
     webhookSecret: 'secret',
 
+    // [optional]: the polling mode requires an health check that slows down the startup
+    // you can customize the max milliseconds to wait for the health check to pass
+    waitForHealthPolling: 3_000, // default: app.initialConfig.pluginTimeout / 6
+
     // [optional] this function is called when an error is not handled
     // by default it logs the error using `fastify.log.error`
     // Ref: https://telegrafjs.org/index.html#/?id=error-handling
