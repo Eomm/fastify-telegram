@@ -3,26 +3,26 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![ci](https://github.com/Eomm/fastify-telegram/actions/workflows/ci.yml/badge.svg)](https://github.com/Eomm/fastify-telegram/actions/workflows/ci.yml)
 
-Create and manage a Telegram bot, easily.
+Create and manage a Telegram bot easily.
 
-This plugin is a good wrapper around [Telegraf](https://telegraf.js.org/) build by a Fastify maintainer.
+This plugin is a good wrapper around [Telegraf](https://telegraf.js.org/) built by a Fastify maintainer.
 
-Why you should use this plugin compared to what you can find on google?
+Why you should use this plugin compared to what you can find on Google?
 
 - All the blog posts and tutorials I found are outdated and use old versions of Telegraf
-- The mentioned tutorials start **2** HTTP servers, one for Fastify and one Node.js HTTP server because the Telgram wrapper starts its own HTTP server. This is just a waste of resources.
+- The mentioned tutorials start **2** HTTP servers, one for Fastify and one for Node.js HTTP server, because the Telegram wrapper starts its own HTTP server. This is just a waste of resources.
 
 This plugin instead:
 
 - Integrates the Telegram bot into the Fastify HTTP server
-- You can use all the Fastify features like hooks and decorators
+- You can use all the Fastify features, like hooks and decorators
 - It has good utilities to manage errors and the telegram features (such as [polling mode](https://core.telegram.org/bots/api#getupdates))
 
 
 ## Install
 
 ```
-npm install fastify-telegram
+npm install @eomm/fastify-telegram
 ```
 
 ### Compatibility
@@ -39,7 +39,7 @@ You can use it to access the [Telegraf](https://telegraf.js.org/) instance and c
 
 ```js
 const fastify = require('fastify')
-const fastifyTelegram = require('fastify-telegram')
+const fastifyTelegram = require('@eomm/fastify-telegram')
 
 async function run () {
   const app = fastify({
